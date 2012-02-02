@@ -1,0 +1,43 @@
+<div id="registrant_list">
+  <h1>Registrant List</h1>
+
+  <table>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Gender</th>
+      <th>Age</th>
+      <th>Phone number</th>
+      <th>Email</th>
+      <th>Comments</th>
+      <th>Heard about</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+
+    <% @registrants.each do |registrant| %>
+      <tr class="<%= registrant.gender=='female'?'list_line_odd':'list_line_even' %>">
+        <td><%= registrant.firstname %></td>
+        <td><%= registrant.lastname %></td>
+        <td><%= registrant.gender %></td>
+        <td><%= registrant.age %></td>
+        <td><%= registrant.phone_number %></td>
+        <td><%= registrant.email %></td>
+        <td><%= registrant.comments %></td>
+        <td><%= registrant.heard_about %></td>
+        <td><%= link_to 'Detail', registrant %></td>
+        <td><%= link_to 'Edit', edit_registrant_path(registrant) %></td>
+        <td><%= link_to 'Cancel', registrant, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <br />
+  <tr>
+    <td class="list_actions">
+      <%= pluralize(@total_registrants, "registrant") %>
+    </td>
+  </tr>
+
+</div>

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Firstname:</b>
+  <%= @register.firstname %>
+</p>
+
+<p>
+  <b>Lastname:</b>
+  <%= @register.lastname %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%= @register.gender %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @register.age %>
+</p>
+
+<p>
+  <b>Phone number:</b>
+  <%= @register.phone_number %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @register.email %>
+</p>
+
+<p>
+  <b>Comments:</b>
+  <%= @register.comments %>
+</p>
+
+<p>
+  <b>Heard about:</b>
+  <%= @register.heard_about %>
+</p>
+
+
+<%= link_to 'Edit', edit_register_path(@register) %> |
+<%= link_to 'Back', registers_path %>
