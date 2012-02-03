@@ -1,4 +1,8 @@
 Registration::Application.routes.draw do
+  resources :event_registrations
+
+  resources :events
+
   get "sessions/new"
 
   get "sessions/create"
@@ -10,6 +14,8 @@ Registration::Application.routes.draw do
   get "admin/index"
 
   resources :registrants
+
+  resources :admin
 
   controller :sessions do
     get 'login' => :new

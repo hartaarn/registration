@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Registrant:</b>
+  <%= @event_registration.registrant_id %>
+</p>
+
+<p>
+  <b>Event:</b>
+  <%= @event_registration.event_id %>
+</p>
+
+<p>
+  <b>Cancelled:</b>
+  <%= @event_registration.cancelled %>
+</p>
+
+
+<%= link_to 'Edit', edit_event_registration_path(@event_registration) %> |
+<%= link_to 'Back', event_registrations_path %>
